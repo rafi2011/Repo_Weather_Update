@@ -1,5 +1,6 @@
 var inputCity = "new york"
-var apiUrl = "http://api.openweathermap.org/data/2.5/onecall?appid=d91f911bcf2c0f925fb6535547a5ddc9&q="
+var currentAPIUrl = "http://api.openweathermap.org/data/2.5/weather?appid=d91f911bcf2c0f925fb6535547a5ddc9&q="
+var oncallapiUrl = "http://api.openweathermap.org/data/2.5/onecall?appid=d91f911bcf2c0f925fb6535547a5ddc9&"
 var cityInputEL = doc.getElementById("weather-search") 
 var formEL = document.getElementById("weather=form")
 
@@ -16,7 +17,8 @@ function handleSubmit(event) {
 
     fetch(apiUrl + inputCity)
     .then(processStream)
-    .then(logCityWeather)
+    .then(getCoords)
+    .then(getWeather)
     .catch(function(error){
         console.log("Thre is an error.", error)
     })
@@ -27,11 +29,17 @@ function processStream (response) {
     return response.json()
 }
 
+
+function getCoords(data) {
+    var coords = data.coords;
+    console.log(coords)
+}
+
 function logCityWeather (data) (
     console.log(data)
-    console.log("temparature", ((9/5)*(data.main.temp-273)+32).toFixed(2),"calvin", data.main.temp)
-    console.log("humidity", data.main.humidity)
-    console.log("wind speed", data.wind.speed)
+    //console.log("temparature", ((9/5)*(data.main.temp-273)+32).toFixed(2),"calvin", data.main.temp)
+    //console.log("humidity", data.main.humidity)
+    //console.log("wind speed", data.wind.speed)
     var temparature = ((9/5)*(data.main.temp-273)+32).toFixed(2)
     var humidity = data.main.humidity
     var windSpeed = data.wind.speed
