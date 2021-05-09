@@ -1,5 +1,5 @@
 var inputCity = "new york"
-var apiUrl = "http://api.openweathermap.org/data/2.5/oncall?appid=d91f911bcf2c0f925fb6535547a5ddc9&q="
+var apiUrl = "http://api.openweathermap.org/data/2.5/onecall?appid=d91f911bcf2c0f925fb6535547a5ddc9&q="
 var cityInputEL = doc.getElementById("weather-search") 
 var formEL = document.getElementById("weather=form")
 
