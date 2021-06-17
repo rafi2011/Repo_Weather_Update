@@ -36,13 +36,20 @@ btnElement.addEventListener('click', function () {
             console.log(currentdate.getFullYear());
             console.log(currentdate.getDate());
             console.log(currentdate.getMonth());
-            var dateEle = document.querySelector('date-format')
             console.log(uvEle);
-            dateEle.innerHTML = "(" + (currentdate.getMonth() + 1) + "/" + currentdate.getDate() + "/" + currentdate.getFullYear() + ")"
+            
 
+            getUVindex(data.coord.lat, data.coord.lon)
+            
             
 
 
         });
 
 });
+
+function getUVindex(lat, lon){
+    var onecallApi = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely,alerts&units=imperial&appid=${apiK}`
+
+    
+}
