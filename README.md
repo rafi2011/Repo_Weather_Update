@@ -11,8 +11,8 @@ This particular project is to build a weather dashboard that will run in the bro
 ## Built With
 * [HTML](https://www.w3schools.com/html/default.asp) - HTML Tutorial
 * [CSS](https://www.w3schools.com/css/default.asp) - CSS Tutorial
-* [JAVASCRIPT](https://www.w3schools.com/js/)
-* [Server Side Api's](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Introduction)
+* [JAVASCRIPT](https://www.w3schools.com/js/) - Javascrit Tutorial
+* [Server Side Api's](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Introduction) - Server side Api's Tutorial
 
 ## Authors
 
